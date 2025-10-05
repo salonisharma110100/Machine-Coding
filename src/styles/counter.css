@@ -1,0 +1,149 @@
+.counter-container {
+    grid-column: 2;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    background-color: aliceblue;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+header h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.count-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 150px;
+    margin-bottom: 25px;
+    background-color: #FFF8F0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.count-style {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1A535C;
+}
+
+/* Main buttons */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.button-style {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FF6B6B;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.button-style:disabled {
+    background-color: #d3d3d3;
+}
+
+.button-style:hover:not(:disabled) {
+    background-color: #f8baba;
+}
+
+
+.custom-step {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.text-input {
+    width: 80px;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.apply-step {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #FFD93D;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.apply-step:disabled {
+    background-color: #e6c12b;
+}
+
+.apply-step:hover:not(:disabled) {
+    background-color: #fff1b3;
+}
+
+.counter-container {
+    position: relative;
+}
+
+.counter-footer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.counter-footer button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4ECDC4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.counter-footer button:hover {
+    background-color: #1e7e34;
+}
+
+@media (max-width: 786px) {
+    #root {
+        grid-template-columns: 1fr;
+    }
+
+    .counter-container {
+        grid-column: 1;
+        width: 90%;
+    }
+
+    .button-group,
+    .custom-step {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-input {
+        width: 60%;
+    }
+
+    .counter-footer {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
