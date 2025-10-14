@@ -25,40 +25,42 @@ const Counter = () => {
     const handleNext = () => navigate("/todolist");
 
     return (
-        <div className="counter-container">
-            <header>
-                <h1>Counter App</h1>
-            </header>
+        <div className="common-container">
+            <div className="counter-container">
+                <header>
+                    <h1>Counter App</h1>
+                </header>
 
-            <section className="count-container">
-                <h2 className="count-style">{count}</h2>
-            </section>
+                <section className="count-container">
+                    <h2 className="count-style">{count}</h2>
+                </section>
 
-            <section className="button-group">
-                <button className="button-style" onClick={handleIncrement}>+1</button>
-                <button className="button-style" onClick={handleDecrement} disabled={count === 0}>-1</button>
-                <button className="button-style" onClick={handleReset}>Reset</button>
-            </section>
+                <section className="button-group">
+                    <button className="button-style" onClick={handleIncrement}>+1</button>
+                    <button className="button-style" onClick={handleDecrement} disabled={count === 0}>-1</button>
+                    <button className="button-style" onClick={handleReset}>Reset</button>
+                </section>
 
-            <section className="custom-step">
-                <input
-                    className="text-input"
-                    type="number"
-                    placeholder="Step (+/-)"
-                    value={input}
-                    onChange={handleInput}
-                />
-                <button
-                    className="apply-step"
-                    onClick={handleApplyStep}
-                    disabled={!input || isNaN(Number(input))}
-                >
-                    Apply Step
-                </button>
-            </section>
-            <footer className="counter-footer">
-                <button onClick={handleNext}>Next</button>
-            </footer>
+                <section className="custom-step">
+                    <input
+                        className="text-input"
+                        type="number"
+                        placeholder="Step (+/-)"
+                        value={input}
+                        onChange={handleInput}
+                    />
+                    <button
+                        className="apply-step"
+                        onClick={handleApplyStep}
+                        disabled={!input || isNaN(Number(input))}
+                    >
+                        Apply Step
+                    </button>
+                </section>
+                <footer className="counter-footer">
+                    <button onClick={handleNext}>Next</button>
+                </footer>
+            </div>
         </div>
 
     );
