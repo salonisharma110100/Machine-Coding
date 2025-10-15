@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+Description
+This repository is a collection of React mini-projects demonstrating a wide range of core frontend concepts, including state management, React Hooks, conditional rendering, form validation, API integration, and dynamic UI components. Each project is self-contained and designed to be practical, interactive, and portfolio-ready.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Users can navigate between projects from a centralized Home Page, making it easy to explore each feature and see React concepts in action.
 
-## Available Scripts
+Projects included in this repository:
+Counter: Simple increment/decrement counter demonstrating useState.
+To-Do List: Task manager with add, delete, and localStorage persistence.
+Toggle Component: Dynamic toggle switch using state.
+Search Filter: Real-time search filter for lists.
+Scroll To Top: Smooth scroll-to-top functionality.
+Login Form Validation: Form with validation for email and password fields.
+Stopwatch / Timer: Real-time timer with start, pause, resume, and reset.
+Quiz App: Interactive multiple-choice quiz with progress tracking and instant feedback.
+Product Filter: Dynamic product listing with search, category filter, and price sorting.
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Features
+Centralized Home Page for easy navigation between projects.
+Clean, modular code structure with functional components and React Hooks.
+Interactive UI components and real-world use cases.
+Each project can be extended or modified for additional functionality.

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import "../styles/todolist.css";
 import "../styles/common.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const ToDoList = () => {
+    const navigate = useNavigate();
     const [text, setText] = useState("");
     const [tasks, setTasks] = useState(() => {
         const saved = localStorage.getItem("tasks");
@@ -37,6 +39,8 @@ const ToDoList = () => {
         );
     };
 
+    const handleNext = () => navigate("/toggle");
+
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }, [tasks]);
@@ -44,6 +48,22 @@ const ToDoList = () => {
     return (
         <div className="common-container">
             <div className="container">
+                <Link
+                    to="/"
+                    style={{
+                        position: "absolute",
+                        top: "20px",
+                        right: "20px",
+                        display: "inline-block",
+                        marginBottom: "15px",
+                        textDecoration: "none",
+                        color: "#2563eb",
+                        fontWeight: "500",
+
+                    }}
+                >
+                    ⬅ Back to Home
+                </Link>
                 <header>
                     <h1>To-Do List</h1>
                 </header>
@@ -92,7 +112,11 @@ const ToDoList = () => {
                         ))
                     )}
                 </section>
+                <footer className="counter-footer">
+                    <button onClick={handleNext}>Next</button>
+                </footer>
             </div>
+
         </div>
     );
 };

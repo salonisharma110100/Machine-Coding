@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/counter.css";
 import "../styles/common.css";
+
 
 const Counter = () => {
     const navigate = useNavigate();
@@ -27,6 +28,22 @@ const Counter = () => {
     return (
         <div className="common-container">
             <div className="counter-container">
+                <Link
+                    to="/"
+                    style={{
+                        position: "absolute",
+                        top: "20px",
+                        right: "20px",
+                        display: "inline-block",
+                        marginBottom: "15px",
+                        textDecoration: "none",
+                        color: "#2563eb",
+                        fontWeight: "500",
+
+                    }}
+                >
+                    ⬅ Back to Home
+                </Link>
                 <header>
                     <h1>Counter App</h1>
                 </header>

@@ -96,27 +96,7 @@ header h1 {
     background-color: #fff1b3;
 }
 
-.counter-footer {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-}
 
-.counter-footer button {
-    padding: 10px 20px;
-    border-radius: 6px;
-    border: none;
-    background-color: #4ECDC4;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-.counter-footer button:hover {
-    background-color: #1e7e34;
-}
 
 @media (max-width: 786px) {
     #root {
