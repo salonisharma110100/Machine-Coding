@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/quiz.css";
+import "../styles/common.css";
 
 const questions = [
     {
@@ -60,12 +61,14 @@ const QuizApp = () => {
 
     if (isFinished) {
         return (
-            <div className="quiz-container">
-                <h2>🎯 Quiz Completed!</h2>
-                <p>
-                    You scored <strong>{score}</strong> out of {questions.length}
-                </p>
-                <button onClick={restartQuiz}>Restart Quiz</button>
+            <div className="common-container">
+                <div className="container">
+                    <h2>🎯 Quiz Completed!</h2>
+                    <p>
+                        You scored <strong>{score}</strong> out of {questions.length}
+                    </p>
+                    <button onClick={restartQuiz}>Restart Quiz</button>
+                </div>
             </div>
         );
     }
@@ -73,43 +76,45 @@ const QuizApp = () => {
     const q = questions[current];
 
     return (
-        <div className="quiz-container">
-            <h3>
-                Question {current + 1} / {questions.length}
-            </h3>
-            <p className="question">{q.question}</p>
+        <div className="common-container">
+            <div className="container">
+                <h3>
+                    Question {current + 1} / {questions.length}
+                </h3>
+                <p className="question">{q.question}</p>
 
-            <div className="options">
-                {q.options.map((opt) => (
-                    <button
-                        key={opt}
-                        className={`option-btn ${selected === opt
+                <div className="options">
+                    {q.options.map((opt) => (
+                        <button
+                            key={opt}
+                            className={`option-btn ${selected === opt
                                 ? opt === q.answer
                                     ? "correct"
                                     : "wrong"
                                 : ""
-                            }`}
-                        onClick={() => !showFeedback && handleSelect(opt)}
-                        disabled={showFeedback}
-                    >
-                        {opt}
-                    </button>
-                ))}
-            </div>
-
-            {showFeedback && (
-                <div className="feedback">
-                    {selected === q.answer ? "✅ Correct!" : "❌ Incorrect!"}
+                                }`}
+                            onClick={() => !showFeedback && handleSelect(opt)}
+                            disabled={showFeedback}
+                        >
+                            {opt}
+                        </button>
+                    ))}
                 </div>
-            )}
 
-            <button
-                onClick={handleNext}
-                className="next-btn"
-                disabled={!showFeedback}
-            >
-                {current === questions.length - 1 ? "Finish" : "Next"}
-            </button>
+                {showFeedback && (
+                    <div className="feedback">
+                        {selected === q.answer ? "✅ Correct!" : "❌ Incorrect!"}
+                    </div>
+                )}
+
+                <button
+                    onClick={handleNext}
+                    className="next-btn"
+                    disabled={!showFeedback}
+                >
+                    {current === questions.length - 1 ? "Finish" : "Next"}
+                </button>
+            </div>
         </div>
     );
 };

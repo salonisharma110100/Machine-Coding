@@ -46,43 +46,54 @@ const ProductFilter = () => {
     ];
 
     return (
-        <div className="filter-container">
-            <h2>🛒 Product Filter</h2>
+        <div className="product-filter-container">
+            <div className="filter-container">
+                <h2>🛒 Product Filter</h2>
 
-            <div className="controls">
-                <input
-                    type="text"
-                    placeholder="Search product..."
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                />
+                <div className="filter-controls">
+                    <input
+                        type="text"
+                        placeholder="Search product..."
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        className="filter-input"
+                    />
 
-                <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                    {uniqueCategories.map((cat) => (
-                        <option key={cat}>{cat}</option>
-                    ))}
-                </select>
+                    <select
+                        value={category}
+                        onChange={(e) => setCategory(e.target.value)}
+                        className="filter-select"
+                    >
+                        {uniqueCategories.map((cat) => (
+                            <option key={cat}>{cat}</option>
+                        ))}
+                    </select>
 
-                <select value={sort} onChange={(e) => setSort(e.target.value)}>
-                    <option value="default">Sort By</option>
-                    <option value="asc">Price: Low → High</option>
-                    <option value="desc">Price: High → Low</option>
-                </select>
-            </div>
+                    <select
+                        value={sort}
+                        onChange={(e) => setSort(e.target.value)}
+                        className="filter-select"
+                    >
+                        <option value="default">Sort By</option>
+                        <option value="asc">Price: Low → High</option>
+                        <option value="desc">Price: High → Low</option>
+                    </select>
+                </div>
 
-            <div className="product-grid">
-                {filtered.length ? (
-                    filtered.map((p) => (
-                        <div key={p.id} className="card">
-                            <img src={p.image} alt={p.title} />
-                            <h4>{p.title.slice(0, 40)}...</h4>
-                            <p>${p.price.toFixed(2)}</p>
-                            <small>{p.category}</small>
-                        </div>
-                    ))
-                ) : (
-                    <p>No products found.</p>
-                )}
+                <div className="product-grid">
+                    {filtered.length ? (
+                        filtered.map((p) => (
+                            <div key={p.id} className="product-card">
+                                <img src={p.image} alt={p.title} />
+                                <h4>{p.title.slice(0, 40)}...</h4>
+                                <p>${p.price.toFixed(2)}</p>
+                                <small>{p.category}</small>
+                            </div>
+                        ))
+                    ) : (
+                        <p>No products found.</p>
+                    )}
+                </div>
             </div>
         </div>
     );

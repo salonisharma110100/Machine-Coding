@@ -1,21 +1,35 @@
-.filter-container {
-    max-width: 900px;
-    margin: 40px auto;
-    text-align: center;
+.product-filter-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    background: linear-gradient(135deg, #e0f2fe 0%, #fef3c7 100%);
+    min-height: 100vh;
 }
 
-.controls {
+.filter-container {
+    grid-column: 2;
+    text-align: center;
+    padding: 16px;
+}
+
+/* .filter-container{
+
+} */
+.filter-controls {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
-.controls input,
-.controls select {
-    padding: 8px;
+.filter-input,
+.filter-select {
+    padding: 8px 10px;
     border-radius: 8px;
     border: 1px solid #ddd;
+    font-size: 0.95rem;
+    width: 200px;
 }
 
 .product-grid {
@@ -24,26 +38,78 @@
     gap: 20px;
 }
 
-.card {
+.product-card {
     border: 1px solid #eee;
     border-radius: 10px;
     padding: 10px;
     background: #fff;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.card:hover {
+.product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
+.product-card img {
     height: 130px;
     object-fit: contain;
     width: 100%;
 }
 
-.card h4 {
+.product-card h4 {
     font-size: 0.9rem;
     margin: 10px 0;
+}
+
+.product-card p {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* ✅ RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .filter-container {
+        margin: 20px auto;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .filter-input,
+    .filter-select {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .product-card img {
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card h4 {
+        font-size: 0.85rem;
+    }
+
+    .filter-input,
+    .filter-select {
+        font-size: 0.9rem;
+        padding: 7px;
+    }
 }

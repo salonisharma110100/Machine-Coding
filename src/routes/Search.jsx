@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../styles/search.css";
+import "../styles/common.css";
 
 const mockData = [
     "Apple",
@@ -29,13 +29,6 @@ const Search = () => {
     return (
         <div className="common-container">
             <div className="search-card">
-                <Link
-                    to="/"
-                    className="back-home"
-                >
-                    ⬅ Back to Home
-                </Link>
-
                 <header>
                     <h1>Search Filter</h1>
                 </header>

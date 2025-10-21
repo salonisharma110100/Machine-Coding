@@ -19,13 +19,6 @@
     font-weight: 500;
 }
 
-/* Header */
-header h1 {
-    margin-bottom: 25px;
-    color: #1f2937;
-    font-size: 1.8rem;
-}
-
 /* Input */
 .search-input-section {
     margin-bottom: 20px;

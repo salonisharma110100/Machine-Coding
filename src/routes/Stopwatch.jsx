@@ -1,7 +1,5 @@
-//Objective:
-//Build a functional Timer/Stopwatch using React that allows the user to start, pause, resume, and reset the timer.
-
 import { useState, useEffect } from "react";
+import "../styles/common.css";
 
 const Stopwatch = () => {
     const [time, setTime] = useState(0);
@@ -23,12 +21,14 @@ const Stopwatch = () => {
     }, [isRunning]);
 
     return (
-        <div style={{ textAlign: "center", marginTop: "50px" }}>
-            <h1>{convertFormat(time)}</h1>
-            <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-                <button onClick={() => setIsRunning(true)} disabled={isRunning}>Start</button>
-                <button onClick={() => setIsRunning(false)} disabled={!isRunning}>Pause</button>
-                <button onClick={() => { setIsRunning(false); setTime(0); }}>Reset</button>
+        <div className="common-container">
+            <div className="container">
+                <h1>{convertFormat(time)}</h1>
+                <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginBottom: "20px" }}>
+                    <button onClick={() => setIsRunning(true)} disabled={isRunning}>Start</button>
+                    <button onClick={() => setIsRunning(false)} disabled={!isRunning}>Pause</button>
+                    <button onClick={() => { setIsRunning(false); setTime(0); }}>Reset</button>
+                </div>
             </div>
         </div>
     )

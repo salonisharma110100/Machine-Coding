@@ -1,0 +1,120 @@
+.form-title {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/* 🌟 Form Container */
+.validation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    width: 100%;
+}
+
+/* ✏️ Input fields */
+.validation-form input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: #fff;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease;
+}
+
+.validation-form input:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 4px #bfdbfe;
+}
+
+/* 🔘 Submit Button */
+.validation-form button {
+    background: #60a5fa;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.validation-form button:hover:not(:disabled) {
+    background: #3b82f6;
+    transform: translateY(-2px);
+}
+
+.validation-form button:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+}
+
+/* ⚠️ Error & ✅ Success */
+.error-text {
+    color: #dc2626;
+    font-size: 0.8rem;
+    margin-top: -2px;
+}
+
+.success-text {
+    color: #16a34a;
+    font-weight: 600;
+    margin-top: 15px;
+    background-color: #ecfdf5;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+    .validation-form {
+        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .form-title {
+        font-size: 1.4rem;
+    }
+
+    .validation-form input {
+        font-size: 0.9rem;
+    }
+
+    .validation-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-title {
+        font-size: 1.2rem;
+    }
+
+    .validation-form {
+        gap: 12px;
+    }
+
+    .validation-form input {
+        padding: 8px 10px;
+        max-width: 90%;
+    }
+
+    .validation-form button {
+        padding: 9px;
+    }
+}

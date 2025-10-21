@@ -1,65 +1,66 @@
-.toggle-container {
-    text-align: center;
-    margin: 50px auto;
-    font-family: 'Poppins', sans-serif;
-}
+ .toggle-container {
+     text-align: center;
+     margin: 50px auto;
+     font-family: 'Poppins', sans-serif;
+     /* background: linear-gradient(135deg, #e0f2fe 0%, #fef3c7 100%); */
+ }
 
-.toggle-wrapper {
-    display: inline-flex;
-    align-items: center;
-    background: #e5e7eb;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    user-select: none;
-    margin-bottom: 20px;
-}
+ .toggle-wrapper {
+     display: inline-flex;
+     align-items: center;
+     background: #e5e7eb;
+     padding: 10px 20px;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: background 0.3s ease;
+     user-select: none;
+     margin-bottom: 20px;
+ }
 
-.toggle-wrapper:hover {
-    background: #d1d5db;
-}
+ .toggle-wrapper:hover {
+     background: #d1d5db;
+ }
 
-.toggle-circle {
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 50%;
-    transition: transform 0.3s ease, background 0.3s ease;
-    margin-right: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
+ .toggle-circle {
+     width: 30px;
+     height: 30px;
+     background: white;
+     border-radius: 50%;
+     transition: transform 0.3s ease, background 0.3s ease;
+     margin-right: 10px;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+ }
 
-.toggle-circle.on {
-    transform: translateX(50px);
-    background: #1f2937;
-}
+ .toggle-circle.on {
+     transform: translateX(50px);
+     background: #1f2937;
+ }
 
-.toggle-label {
-    font-weight: 500;
-    font-size: 1rem;
-    color: #374151;
-    transition: color 0.3s ease;
-}
+ .toggle-label {
+     font-weight: 500;
+     font-size: 1rem;
+     color: #374151;
+     transition: color 0.3s ease;
+ }
 
-.toggle-label.on {
-    color: #f3f4f6;
-}
+ .toggle-label.on {
+     color: #f3f4f6;
+ }
 
-.preview {
-    padding: 30px;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: background 0.4s ease, color 0.4s ease;
-}
+ .preview {
+     padding: 30px;
+     border-radius: 12px;
+     font-size: 1.1rem;
+     font-weight: 500;
+     transition: background 0.4s ease, color 0.4s ease;
+ }
 
-.preview.light {
-    background: #f3f4f6;
-    color: #1f2937;
-}
+ .preview.light {
+     background: #f3f4f6;
+     color: #1f2937;
+ }
 
-.preview.dark {
-    background: #1f2937;
-    color: #f3f4f6;
-}
+ .preview.dark {
+     background: #1f2937;
+     color: #f3f4f6;
+ }
