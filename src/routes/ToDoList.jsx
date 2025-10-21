@@ -69,27 +69,6 @@ const ToDoList = () => {
                     {tasks.length === 0 ? (
                         <p className="no-task">No tasks yet. Add one!</p>
                     ) : (
-                        // tasks.map((item) => (
-                        //     <div key={item.id} className="todolist">
-                        //         <input
-                        //             type="checkbox"
-                        //             checked={item.completed}
-                        //             onChange={() => handleToggle(item.id)}
-                        //         />
-                        //         <div
-                        //             className={`item-text ${item.completed ? "completed" : ""
-                        //                 }`}
-                        //         >
-                        //             {item.task}
-                        //         </div>
-                        //         <button
-                        //             className="delete-button"
-                        //             onClick={() => handleRemove(item.id)}
-                        //         >
-                        //             Remove
-                        //         </button>
-                        //     </div>
-                        // ))
                         tasks.map((item) => (
                             <div key={item.id} className="todolist">
                                 {/* ✅ Group checkbox + text */}

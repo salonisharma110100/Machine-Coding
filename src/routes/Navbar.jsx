@@ -37,4 +37,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-// ...existing code...
