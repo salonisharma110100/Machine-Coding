@@ -110,7 +110,7 @@
 @media (max-width: 900px) {
 
     .input-section {
-        flex-direction: column;
+        flex-direction: row;
         gap: 12px;
     }
 
@@ -119,7 +119,7 @@
     }
 
     .todolist {
-        flex-direction: column;
+        flex-direction: row;
         gap: 8px;
     }
 }
